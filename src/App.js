@@ -1,23 +1,44 @@
 // import logo from './logo.svg';
 import './App.css';
 
-function Square(){
+function Square ({value}){
   return(
     
     <>
-    <button className='square'>X</button>
+    <button className='square'>{value}</button>
+    </>
+  )
+}
+
+function Board() {
+  return(
+    <>
+<div className='board-row'>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+</div>
+<div className='board-row'>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+</div>
+<div className='board-row'>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+  <Square value ="1"></Square>
+</div>
+
     </>
   )
 }
 
 
 
-
-
 function App() {
   return (
     <div className='App'>
-    <Square></Square>
+    <Board></Board>
     </div>
   );
 }
